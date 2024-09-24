@@ -2,7 +2,11 @@
   <div class="text-center">
     <h1 style="font-size:50px;"class="title mb-2">tabiran</h1>
     <p style="font-size:25px;"class="sub-title">~旅先でのランニングを共有する～</p>
-    <h2 class="btn btn-dark mr-2">新規登録</h2>
-    <h2 class="btn btn-dark ml-2">ログイン</h2>
-    </div>
+    <%= link_to new_user_registration_path do %>
+      <h2 class="btn btn-dark mr-2">新規登録</h2>
+    <% end %>
+    <%= link_to new_user_session_path do %>
+      <h2 class="btn btn-dark ml-2">ログイン</h2>
+    <% end %>
+  </div>
 </div>
