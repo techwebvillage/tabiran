@@ -4,3 +4,8 @@
 //= require bootstrap
 import "@hotwired/turbo-rails"
 import "controllers"
+window.raty = function(elem, opt) {
+let raty = new Raty(elem, opt)
+  raty.init();
+  return raty;
+}
