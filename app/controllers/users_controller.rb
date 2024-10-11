@@ -8,6 +8,9 @@ class UsersController < ApplicationController
     @posts = @user.posts.page(params[:page]).per(8).reverse_order
     @following_users = @user.following_user
     @follower_users = @user.follower_user
+    @current_entry = Entry.where(user_id: current_user.id)
+    @another_entry = Entry.where(user_id: @user.id)
+    unless @user.id == current_user.id
   end
 
   def edit
