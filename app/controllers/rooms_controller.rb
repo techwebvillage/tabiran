@@ -12,4 +12,9 @@ class RoomsController < ApplicationController
       @messages = @room.messages
       @messege = Message.new
       @entries = @room.entries
+      @my_account = current_user.id
+    else
+      redirect_back(fallback_location: root_path)
+    end
+  end
 end
