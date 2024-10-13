@@ -3,5 +3,10 @@
     <div class="row">
       <div class="col text-center">
         <% @entries.each do |e| %>
-              <% if @my_account != e.user.id %>
-                <div class="title"><h2><strong><span class= "name"><%= e.user.name %></span>さんとのトークルーム</strong></h2></div>
+          <% if @my_account != e.user.id %>
+            <div class="title"><h2><strong><span class= "name"><%= e.user.name %></span>さんとのトークルーム</strong></h2></div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    
