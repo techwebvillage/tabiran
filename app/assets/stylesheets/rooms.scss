@@ -16,3 +16,14 @@
     font-size: 14px;
     background: #f6f6f6;
 }
+
+.says {
+    align-self: flex-start;
+    margin: 0 400px 0 0;
+    padding: 10px 10px 0 10px;
+    width: fit-content;
+    text-align: left;
+    overflow-wrap: break-word;
+    border-radius: 12px;
+    background: #edc0ae;
+}
