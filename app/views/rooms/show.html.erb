@@ -12,13 +12,15 @@
     <div class="chat-container">
       <% @messages.each do |m| %>
         <% if m.user.id == current_user.id %>
-          <div class="mycomment">
-            <p><%= m.message %></p>
-          </div>
+          <p></p>
+            <div class="mycomment">
+              <p><%= m.message %></p>
+            </div>
         <% else %>
-          <div class="says">
-            <p><%= m.message %></p>
-          </div>
+          <p></p>
+            <div class="says">
+              <p><%= m.message %></p>
+            </div>
         <% end %>
       <% end %>
     </div>
