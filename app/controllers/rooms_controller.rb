@@ -10,7 +10,7 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
     if Entry.where(user_id: current_user.id, room_id: @room.id).present?
       @messages = @room.messages
-      @messege = Message.new
+      @message = Message.new
       @entries = @room.entries
       @my_account = current_user.id
     else
