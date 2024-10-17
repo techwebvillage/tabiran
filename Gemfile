@@ -86,3 +86,5 @@ gem 'kaminari'
 gem 'enum_help'
 
 gem 'jquery-rails'
+
+gem 'devise-i18n'
