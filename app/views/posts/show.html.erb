@@ -31,8 +31,10 @@
             &nbsp;閲覧数: <%= @post.view_counts.count %><br>
           </p>
         </div>
-        <h2>感想</h2>
-        <p id="text"><%= @post.text %></p>
+        <div class="box2">
+          <span class="box-title">感想</span>
+          <p id="text"><%= @post.text %></p>
+        </div>
         <% if @post.user == current_user %>
             <%= link_to '編集する', edit_post_path(@post.id), class: "btn btn-dark mr-3" %>
             <%= link_to '削除する', post_path(@post.id),  data: { turbo_method: :delete, turbo_confirm:  "本当に消しますか？"}, class: "btn btn-dark" %><br>
