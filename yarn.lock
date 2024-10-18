@@ -6,3 +6,8 @@ iquery@^0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/iquery/-/iquery-0.0.2.tgz#8642098bf773c1922979596006ee943f8f00826d"
   integrity sha512-RMQJjjDkaitTDTK7mXsV6TE4Vr13j46XERHa9Dv0gqa7d8dhk9VLgN94G9B9B8t5K7r8afBuF7iRLVx4NvCJZQ==
+
+jquery@^3.7.1:
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.7.1.tgz#083ef98927c9a6a74d05a6af02806566d16274de"
+  integrity sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==

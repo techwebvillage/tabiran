@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "iquery": "^0.0.2"
+    "iquery": "^0.0.2",
+    "jquery": "^3.7.1"
   }
 }
