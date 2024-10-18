@@ -31,11 +31,11 @@
           <script>
             let showRateElement = document.querySelector('#show-stars');
             let showOpt = {
-              starOn: "<%= asset_path('star-on.png') %>",
-              starOff: "<%= asset_path('star-off.png') %>",
-              starHalf: "<%= asset_path('star-half.png') %>",
+              starOn: `<%= asset_path('star-on.png') %>`,
+              starOff: `<%= asset_path('star-off.png') %>`,
+              starHalf: `<%= asset_path('star-half.png') %>`,
               scoreName: 'post[star]',
-              score: "<%= @post.star %>",
+              score: `<%= @post.star %>,
               readOnly: true
             };
             window.raty(showRateElement, showOpt);
@@ -66,10 +66,9 @@
             <div class="comment-delete">
               <%= link_to "削除", post_comment_path(comment.post, comment), data: { turbo_method: :delete }, class: "btn-sm btn-dark" %>
             </div>
+            <% end %>
           </div>
         </div>
-        <% end %>
-        <% end %>
         <%= paginate @comments %>
       </div>  
     </div>

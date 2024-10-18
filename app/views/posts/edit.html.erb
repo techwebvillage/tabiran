@@ -9,7 +9,7 @@
       <% @post.errors.full_messages.each do |message| %>
         <%= message %>
       <% end %>
-      </div>
+    </div>
     <% end %>
     <div class="row">
       <%= form_with model: @post, local:true do |f| %>

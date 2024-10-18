@@ -2,7 +2,7 @@
   <div class="box">
     <div class="box-inner">
       <%= form_with model: @user, url: user_session_path, local: true do |f| %>
-      <%= flash.each do |message_type, message| %>
+      <% flash.each do |message_type, message| %>
         <%= content_tag :div,message, class: message_type %>
       <% end %>
       <h1>ログイン</h1>
@@ -26,7 +26,7 @@
         <% if devise_mapping.rememberable? %>
         <div class="remember">
           <%= f.check_box :remember_me %>
-          <%= f.label :remember, "ログインしたままにする" %>
+          <%= f.label :remember_me, "ログインしたままにする" %>
         </div>
         <% end %>
       </div>
