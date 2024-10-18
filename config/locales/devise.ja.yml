@@ -10,5 +10,8 @@ ja:
               blank: "Eメールを入力してください。"
             password:
               blank: "パスワードを入力してください。"
+              too_short: "パスワードは6文字以上にしてください。"
+            password_confirmation:
+              confirmation: "パスワードとパスワード（確認）が一致しません。"
             name:
               blank: "名前を入力してください。"
