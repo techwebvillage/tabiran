@@ -1,8 +1,18 @@
 <div class="cover-index">
-  <div class="container d-flex flex-column align-items-center">
-    <div class="row mt-5">
+  <div class="row mt-5">
+    <div class="container d-flex flex-column align-items-center">
       <h1 class="font-weight-normal">投稿一覧</h1>
     </div>
-    <%= render 'index', posts: @posts %>
+  </div>
+  <div class="container">
+    <div class="side">
+      <h5>ユーザ名</h5>
+      <h5>投稿ボタン</h5>
+    </div>
+    <div class="body">
+      <div class="container d-flex flex-column align-items-center">
+        <%= render 'index', posts: @posts %>
+      </div>
+    <div>
   </div>
 </div>
