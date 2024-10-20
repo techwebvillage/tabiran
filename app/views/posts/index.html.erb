@@ -6,7 +6,7 @@
   </div>
   <div class="container">
     <div class="side">
-      <div><%= link_to "user", user_path(current_user.id), class: "text-dark nav-link" %></div>
+      <div><%= link_to current_user.name, user_path(current_user.id), class: "text-dark nav-link" %></div>
       <div><%= link_to "投稿する", new_post_path, class: "btn btn-dark" %></div>
     </div>
     <div class="body">
