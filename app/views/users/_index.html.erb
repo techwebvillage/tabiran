@@ -1,6 +1,6 @@
-<div class="row gx-3 mt-5 w-100">
+<div class="row mt-5 w-100">
 <% users.each do |user| %>
-<div class="col-sm-4">
+<div class="one-post card sm-4 mt-3">
   <%= link_to user_path(user) do %>
   <div class="d-flex">
     <%= attachment_image_tag user, :profile_image, size: '50x50', fallback: "no_image.svg", class: "mt-3 ml-3 profile-img" %>
