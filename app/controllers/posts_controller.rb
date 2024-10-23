@@ -7,7 +7,11 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     if @post.save
-      redirect_to post_path(@post.id)
+      if @post.draft?
+        redirect_to confirm_posts_path,notice: '下書きとして保存されました。'
+      else
+        redirect_to post_path(@post.id)
+      end
     else
       render :new, status: :unprocessable_entity
     end

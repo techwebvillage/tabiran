@@ -3,7 +3,7 @@ h1 {
   }
   
 .cover-new {
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
   background-image: url(/assets/new3.jpg);
   background-color: rgba(255, 255, 255, 0.4);
@@ -47,7 +47,7 @@ h1 {
 }
 
 .cover-show {
-  height: 130%;
+  min-height: 100vh;
   width: 100%;
   background-image: url(/assets/show.jpg);
   background-color: rgba(255, 255, 255, 0.4);
