@@ -44,6 +44,15 @@ h1 {
 
 .index-left {
   margin-left: 2.5rem!important;
+  color:rgba(248, 6, 6, 0.4) !important;
+}
+
+.page a:hover,
+.next a:hover,
+.last a:hover,
+.first a:hover,
+.prev a:hover {
+  color: blue !important
 }
 
 .cover-show {
