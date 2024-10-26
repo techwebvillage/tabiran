@@ -32,6 +32,10 @@ h1 {
   filter: brightness(0.5);
 }
 
+.one-post:hover .caption {
+  color: rgb(19, 3, 239);
+}
+
 .caption {
   color: black;
   font-size: 20px;
