@@ -4,7 +4,7 @@
   <%= link_to user_path(user) do %>
   <div class="d-flex">
     <%= attachment_image_tag user, :profile_image, size: '50x50', fallback: "no_image.svg", class: "mt-3 ml-3 profile-img" %>
-    <p class="caption h4 mt-4"><span class="mgl-10"><%= user.name %></span><span class="mgl-20"><%= "#{user.posts.count} 投稿" %></span></p>
+    <p class="caption h4 mt-4"><span class="mgl-10"><%= user.name %></span><span class="mgl-20"><%= "#{user.posts.where(status: 'published').count} 投稿" %></span></p>
   </div>
   <% end %>
   <p class="caption h6 mt-4"><%= user.profile %></p>
