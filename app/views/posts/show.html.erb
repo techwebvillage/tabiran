@@ -55,7 +55,7 @@
               <p><%= comment.comment %></p>
               <% if comment.user == current_user %>
                 <div class="comment-delete">
-                  <%= link_to "削除", post_comment_path(comment.post, comment), data: { turbo_method: :delete }, class: "btn btn-dark btn-sm" %>
+                  <%= link_to "削除", post_comment_path(comment.post, comment), data: { turbo_method: :delete }, class: "btn btn-dark btn-sm"%>
                 </div>
               <% end %>
             </div>
