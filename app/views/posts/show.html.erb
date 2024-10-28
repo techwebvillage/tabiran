@@ -52,14 +52,12 @@
             <div class="comments-index mb-2">
               <%= comment.user.name %>
               <%= comment.created_at.strftime('%Y/%m/%d %H:%M:%S') %><br>
-              <div class="d-flex">
-                <%= comment.comment %>
-                <% if comment.user == current_user %>
-                  <div class="comment-delete">
-                    <%= link_to "削除", post_comment_path(comment.post, comment), data: { turbo_method: :delete }, class: "btn-sm btn-dark" %>
-                  </div>
-                <% end %>
-              </div>
+              <p><%= comment.comment %></p>
+              <% if comment.user == current_user %>
+                <div class="comment-delete">
+                  <%= link_to "削除", post_comment_path(comment.post, comment), data: { turbo_method: :delete }, class: "btn-sm btn-dark" %>
+                </div>
+              <% end %>
             </div>
           <% end %>
         <%= paginate @comments %>
