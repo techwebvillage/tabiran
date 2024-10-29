@@ -49,16 +49,16 @@
 
         <p>コメント件数:<%= @comments.count %></p>
           <% @comments.each do |comment| %>
-            <div class="comments-index mb-2" style="position: relative;">
+            <div class="comments-index mb-2">
               <%= comment.user.name %>
               <%= comment.created_at.strftime('%Y/%m/%d %H:%M:%S') %><br>
               <p><%= comment.comment %></p>
-              <% if comment.user == current_user %>
-                <div class="comment-delete position: absolute; right: 0; top: 0;">
-                  <%= link_to "削除", post_comment_path(comment.post, comment), data: { turbo_method: :delete }, class: "btn btn-dark btn-sm"%>
-                </div>
-              <% end %>
             </div>
+          <% if comment.user == current_user %>
+            <div class="d-flex justify-content-end">
+              <%= link_to "削除", post_comment_path(comment.post, comment), data: { turbo_method: :delete }, class: "btn btn-dark btn-sm mb-5"%>
+            </div>
+          <% end %>
           <% end %>
         <%= paginate @comments %>
       </div>  
