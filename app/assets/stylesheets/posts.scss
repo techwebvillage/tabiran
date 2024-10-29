@@ -33,7 +33,7 @@ h1 {
 }
 
 .one-post:hover .caption {
-  color: rgb(60, 9, 242);
+  color: aqua;
 }
 
 .caption {
@@ -163,26 +163,29 @@ h1 {
   padding: 0;
 }
 
-.indextop {
-  width: 100%;
-  height: 200px;
-  display: flex;
-  margin-top: -30px;
-}
+// .indextop {
+//   width: 100%;
+//   height: 200px;
+//   display: flex;
+//   margin-top: -30px;
+// }
 
 .body {
   width: 75%;
-  margin: 0 auto;
-  display:  flex;
-  justify-content: center;
-  align-items: center;
+  margin-right: 3%;
+  margin-left: 10%;
 }
 
 .side {
-  width: 25%;
-  margin-top: -50px;
+  width: 23%;
+  margin-left: 3%;
 }
 
 .pagination {
   margin-bottom: 20px;
+}
+
+.userinfo {
+  color: #000;
+  font-size: 17px;
 }

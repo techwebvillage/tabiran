@@ -1,18 +1,18 @@
 <div class="cover-index">
   <div class="row mt-5">
-    <div class="container indextop d-flex flex-column align-items-center">
+    <div class="container d-flex flex-column align-items-center">
       <h1 class="font-weight-normal">投稿一覧</h1>
     </div>
   </div>
   <div class="container">
     <div class="side">
       <div class="userinfo">
-        <p>userinfo</p>
+        <h1>User info</h1>
       </div>
       <div class="d-flex w-100">
         <%= attachment_image_tag @user, :profile_image, size: '100x100', fallback: "no_image.svg", class: "mb-3 profile-img" %>
       </div>
-      <div><%= link_to current_user.name, user_path(current_user.id), class: "text-dark nav-link" %></div>
+      <div><h3><%= link_to current_user.name, user_path(current_user.id), class: "text-dark nav-link" %></h3></div>
       <%= link_to follows_user_path(@user), class: "text-dark nav-link" do %>
         <h6>フォロー<%= @following_users.count %></h6>
       <% end %>
@@ -25,6 +25,6 @@
       <div class="container d-flex flex-column align-items-center">
         <%= render 'index', posts: @posts %>
       </div>
-    <div>
+    </div>
   </div>
 </div>
