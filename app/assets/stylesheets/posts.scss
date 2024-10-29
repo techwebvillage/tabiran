@@ -172,17 +172,23 @@ h1 {
 
 .body {
   width: 75%;
-  margin-right: 3%;
+  margin-right: 5%;
   margin-left: 10%;
 }
 
 .side {
   width: 23%;
-  margin-left: 3%;
+  margin-left: 5%;
 }
 
 .pagination {
   margin-bottom: 20px;
+}
+
+.index-contents {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 // .userinfo {
