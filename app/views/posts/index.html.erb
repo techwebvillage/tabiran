@@ -6,6 +6,12 @@
   </div>
   <div class="container">
     <div class="side">
+      <div class="userinfo">
+        <p>userinfo</p>
+      </div>
+      <div class="d-flex w-100">
+        <%= attachment_image_tag @user, :profile_image, size: '100x100', fallback: "no_image.svg", class: "mb-3 profile-img" %>
+      </div>
       <div><%= link_to current_user.name, user_path(current_user.id), class: "text-dark nav-link" %></div>
       <div><%= link_to "投稿する", new_post_path, class: "btn btn-dark" %></div>
     </div>

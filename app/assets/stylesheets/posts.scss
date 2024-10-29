@@ -171,11 +171,15 @@ h1 {
 }
 
 .body {
-  width: 92%;
+  width: 75%;
+  margin: 0 auto;
+  display:  flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .side {
-  width: 8%;
+  width: 25%;
   margin-top: -50px;
 }
 
