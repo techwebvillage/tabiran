@@ -30,14 +30,6 @@
     padding: 15px;
 }
 
-.profile, .profile * {
-    color: #333 !important;
-}
-
-.profile:hover, profile:hover * {
-    color: inherit !important;
-}
-
 .mgl-10 {
     margin-left: 10px;
 }
@@ -48,4 +40,27 @@
 
 .pagination {
     margin-top: 20px;
+}
+
+.one-post.card {
+    transition: background-color 0.3s, opacity 0.3s;
+    position: relative;
+}
+
+.one-post.card:hover {
+    background-color: rgba(227, 229, 230, 0.986);
+}
+
+.one-post.card .profile-img,
+.one-post.card .user.name,
+.one-post.card .caption {
+    transition: opacity 0.3s;
+}
+
+.one-post.card:hover .profile-img {
+    opacity: 0.7;
+}
+
+.one-post.card:hover .caption {
+    color: rgb(0, 0, 6);
 }

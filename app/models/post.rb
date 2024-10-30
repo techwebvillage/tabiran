@@ -6,7 +6,7 @@ class Post < ApplicationRecord
     has_many :view_counts, dependent: :destroy
 
     validates :location, presence: true, length: { maximum: 15 }
-    validates :text, presence: true, length: { maximum: 195 }
+    validates :text, presence: true, length: { maximum: 200 }
     validates :image, presence: true
 
     enum status: { published: 0, draft: 1 }
