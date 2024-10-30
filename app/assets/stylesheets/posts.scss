@@ -34,6 +34,7 @@ h1 {
 
 .one-post:hover .caption {
   color: aqua;
+  font-weight: bold;
 }
 
 .caption {
@@ -43,7 +44,7 @@ h1 {
 }
 
 .caption:hover {
-  text-decoration: none !important;
+  color: aqua;
 }
 
 .index-left {
