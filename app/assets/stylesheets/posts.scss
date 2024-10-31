@@ -211,13 +211,15 @@ h1 {
 }
 
 .post-box {
-  padding: 1em 1em;
+  padding: 0.5em 1em;
   margin: 2em 0;
-  border: solid 2px #f3ecec;
-  background-color: #f3ecec;
+  color: #5989cf;
+  background-color: #c6e4ff;
+  border-bottom: solid 6px #aac5de;
+  border-radius:  9px;
 }
 
-.post-box p,img {
-  margin-left: 0.2em;
+.post-box {
+  margin: 0;
   padding: 0;
 }
