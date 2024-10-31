@@ -72,12 +72,13 @@
 }
 
 .post-box {
-    margin-left: 1em;
+    padding: 1em 1em;
+    margin: 2em 0;
     border: solid 2px #f3ecec;
     background-color: #f3ecec;
 }
 
-.post-box p {
-    margin: 0;
+.post-box p,img {
+    margin-left: 0.5em;
     padding: 0;
 }
