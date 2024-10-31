@@ -174,7 +174,7 @@ h1 {
 .body {
   width: 85%;
   margin-right: 5%;
-  margin-left: 10%;
+  margin-left: 2%;
 }
 
 .side {
@@ -208,4 +208,14 @@ h1 {
 
 .caption .nav-link.text-dark:hover {
   color: rgba(7, 21, 227, 0.892) !important;
+}
+
+.post-box {
+  border: solid 2px #f3ecec;
+  background-color: #f3ecec;
+}
+
+.post-box p {
+  margin: 0;
+  padding: 0;
 }
