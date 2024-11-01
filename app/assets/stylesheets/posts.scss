@@ -212,16 +212,17 @@ h1 {
 
 .post-box {
   padding: 0.5em 1em;
-  margin: 2em 0 2em auto;
+  margin: 32px 1px 32px 10px;
   color: #000000;
   background:  #fbfcfc;
   border-top: solid 6px #737575;
   box-shadow:  0 3px 4px rgba(0, 0, 0, 0.8);
-  max-width: calc(100% - 8px);
+  // max-width: calc(100% - 10px);
 }
 
 .post-box p,img {
-  // margin-left: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
   padding: 0;
 }
 

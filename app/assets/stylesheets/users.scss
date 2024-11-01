@@ -70,3 +70,18 @@
     color: black !important;
     text-decoration: none;
 }
+
+.mypage-box {
+    padding: 0.5em 1em;
+    margin: 2em 0 2em auto;
+    color: #000000;
+    background:  #fbfcfc;
+    border-top: solid 6px #737575;
+    box-shadow:  0 3px 4px rgba(0, 0, 0, 0.8);
+    max-width: calc(100% - 20px);
+  }
+  
+  .mypage-box p,img {
+    margin-left: 0.5em;
+    padding: 0;
+  }
