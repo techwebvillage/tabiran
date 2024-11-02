@@ -40,25 +40,27 @@ html, body {
 //   text-align: center;
 // }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 575px) {
     .cover {
       display: table;
       height: 100%;
     }
 
     .text-center {
+      width: 100%;
       display: table-cell;
       vertical-align: middle;
       text-align: center;
     }
 
     .title {
-      font-family: system-ui;
-      font-size: 50px;
+      width: 100%;
+      font-size: 2rem;
+      padding: 0 10px;
     }
     
     .sub-title {
-      font-family: system-ui;
-      font-size: 20px;
+      width: 100%;
+      font-size: 1rem;
     }
 }
