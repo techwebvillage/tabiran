@@ -29,7 +29,10 @@
 
 header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: black;
+  padding:  0 15px;
 }
 
 header div:first-child {
@@ -58,6 +61,7 @@ header a:hover {
 .nav-link {
   color: white;
   text-decoration: none;
+  display: inline-block;
 }
 
 a {
@@ -72,4 +76,39 @@ header a:hover {
 
 .profile-img {
   border-radius: 50%;
+}
+
+.hamburger {
+  display:  none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+@media screen and (max-width: 575px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: black;
+    position: absolute
+    // top: 50px;
+    // left: 0;
+    // padding: 10px 0;
+  }
+
+  .nav-menu.nav-open {
+    display: flex;
+  }
+
+  .nav-menu.nav-link {
+    display: block;
+    margin: 10px;
+    color: white;
+    text-align: center;
+  }
 }
