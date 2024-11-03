@@ -147,7 +147,7 @@ header a:hover {
     display: none;
     flex-direction: column;
     background: #242424;
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 50px;
     z-index: 9999;
@@ -156,4 +156,19 @@ header a:hover {
   .navigation.open {
     display: flex;
   }
+
+  // .nav-list {
+  //   text-align: center;
+  //   list-style: none;
+  //   padding: 0;
+  //   margin: 0;
+  // }
+
+  // .nav-list-item {
+  //   border-bottom: solid 1px #474747;
+  // }
+
+  // .nav-list-item:first-child {
+  //   border-top: solid 1px #474747;
+  // }
 }

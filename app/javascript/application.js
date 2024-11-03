@@ -9,5 +9,6 @@ $(function () {
     $('#js-hamburger-menu').on('click', function () {
       $('.navigation').toggleClass('open');
       $(this).toggleClass('hamburger-menu--open');
+      console.log("Menu toggled");
     });
 });
