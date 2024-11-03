@@ -90,11 +90,29 @@
     margin-bottom: 2px;
   }
 
+.profile-container .profile-img {
+    margin-right: 20px; 
+  }
+
+.f-count {
+    margin-right: 10px;
+}
+
 @media screen and (max-width: 575px) {
-    .mobile-edit-btn {
-        display: flex;
+    .edit-btn {
+        margin-top: 0px;
+    }
+
+    .profile-container {
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        width: 100%;
+    }
+
+    .profile-container .profile-img {
+        margin-right: 0;
+    }
+
+    .profile-container .profile {
+        margin-left: 0;
     }
 }

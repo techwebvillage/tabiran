@@ -22,7 +22,7 @@
       <% end %>
     <% end %>
     <% if user_signed_in? && @user == current_user %>
-      <div class="edit-btn d-flex w-100 mb-3 justify-content-end justify-content-md-center">
+      <div class="edit-btn d-flex w-100 mb-3 justify-content-center justify-content-md-end">
         <div class="mobile-edit-btn">
           <%= link_to "プロフィール編集", edit_user_path(@user), class: "btn btn-dark" %>
         </div>
@@ -39,13 +39,13 @@
         </p>
       <% end %>
     <% end %> 
-    <div class="d-flex w-100">
+    <div class="profile-container d-flex w-100 align-items-center">
       <%= attachment_image_tag @user, :profile_image, size: '100x100', fallback: "no_image.svg", class: "mb-3 profile-img" %>
       <h4 class="ml-3 mb-3 card w-100 profile"><%= @user.profile %></h4>
     </div>
     <div class="d-flex">
       <%= link_to follows_user_path(@user) do %>
-        <h6>フォロー<%= @following_users.count %></h6>
+        <div class="f-count"><h6>フォロー<%= @following_users.count %></h6></div>
       <% end %>
       <%= link_to followers_user_path(@user) do %>
         <h6>フォロワー<%= @follower_users.count %></h6>
