@@ -78,8 +78,17 @@ header a:hover {
   border-radius: 50%;
 }
 
+.hamburger-menu {
+  display: none;
+}
+
 @media screen and (max-width: 575px) {
+  .nav-link {
+    display: none;
+  }
+
   .hamburger-menu {
+    display: block;
     width: 50px;
     height: 50px;
     position: relative;
@@ -131,10 +140,15 @@ header a:hover {
 
   .navigation {
     display: none;
+    flex-direction: column;
     background: #242424;
     position: absolute;
     width: 100%;
     top: 50px;
     z-index: 9999;
+  }
+
+  .navigation.open {
+    display: flex;
   }
 }
