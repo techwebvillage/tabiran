@@ -6,8 +6,8 @@ import "@hotwired/turbo-rails"
 import "controllers"
 
 $(function () {
-    $('#js-hamburger-menu, .nav-link').on('click', function () {
-      $('.navigation').slideToggle(500)
-      $('.hamburger-menu').toggleClass('hamburger-menu--open')
+    $('#js-hamburger-menu').on('click', function () {
+      $('.navigation').toggleClass('open');
+      $(this).toggleClass('hamburger-menu--open');
     });
 });

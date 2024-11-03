@@ -82,6 +82,11 @@ header a:hover {
   display: none;
 }
 
+.navigation {
+  display: flex;
+  flex-direction: row;
+}
+
 @media screen and (max-width: 575px) {
   .nav-link {
     display: none;
