@@ -33,15 +33,14 @@
     <%= yield %>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="path/to/your/javascript.js"></script>
-    # <script>
-    #   $(function () {
-    #     $('#js-hamburger-menu').on('click', function () {
-    #       $('.navigation').toggleClass('open');
-    #       $(this).toggleClass('hamburger-menu--open');
-    #       console.log("Menu toggled");
-    #     });
-    #   });
-    # </script>
+    <script>
+      $(function () {
+        $('#js-hamburger-menu').on('click', function () {
+          $('.navigation').toggleClass('open');
+          $(this).toggleClass('hamburger-menu--open');
+          console.log("Menu toggled");
+        });
+      });
+    </script>
   </body>
 </html>
