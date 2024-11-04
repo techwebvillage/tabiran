@@ -37,7 +37,7 @@ header {
 
 header div:first-child {
   margin-right: auto;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 header div:last-child {
@@ -61,7 +61,6 @@ header a:hover {
 .nav-link {
   color: white;
   text-decoration: none;
-  display: inline-block;
 }
 
 a {
@@ -86,6 +85,10 @@ header a:hover {
   display: flex;
   flex-direction: row;
 }
+
+// .nav-link {
+//   font-size: 16px;
+// }
 
 @media screen and (max-width: 575px) {
   // .nav-link {
