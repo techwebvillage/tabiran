@@ -5,7 +5,7 @@
 import "jquery";
 import "@hotwired/turbo-rails"
 import "controllers"
-import "javascript";
+import "./javascript";
 
 $(function () {
     $('#js-hamburger-menu').on('click', function () {
