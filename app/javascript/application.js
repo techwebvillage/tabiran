@@ -3,14 +3,21 @@
 //= require popper
 //= require bootstrap
 import "jquery";
-import "@hotwired/turbo-rails"
-import "controllers"
-import "./javascript";
+import "@hotwired/turbo-rails";
+import "controllers";
 
-$(function () {
-    $('#js-hamburger-menu').on('click', function () {
+document.addEventListener("turbo:load", function () {
+    console.log("JavaScript file loaded");
+
+    $('#js-hamburger-menu').off('click').on('click', function () {
+      console.log("Hamburger menu clicked");
       $('.navigation').toggleClass('open');
       $(this).toggleClass('hamburger-menu--open');
-      console.log("Menu toggled");
+
+      if ($('.navigation').hasClass('open')) {
+        console.log("Menu is open");  
+      } else {
+        console.log("Menu is closed");
+      }
     });
 });
