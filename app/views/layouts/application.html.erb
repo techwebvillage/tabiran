@@ -33,14 +33,6 @@
     <%= yield %>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      $(function () {
-        $('#js-hamburger-menu').on('click', function () {
-          $('.navigation').toggleClass('open');
-          $(this).toggleClass('hamburger-menu--open');
-          console.log("Menu toggled");
-        });
-      });
-    </script>
+    <%= javascript_importmap_tags %>
   </body>
 </html>
