@@ -113,7 +113,9 @@ h1 {
 }
 
 .comments {
-  margin-left: 50px;
+  float: right;
+  width: 100%;
+  margin-left: 20px;
 }
 
 .caption {
@@ -276,17 +278,16 @@ h1 {
   }
  
   .show-mobile {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   .comments {
-    margin: 0;
+    // float: none;
+    // margin: 0 auto;
     width: 100%;
     order: 2;
-    padding: 0 1em;
-    box-sizing: border-box;
-    text-align: left;
   }
 
   .box1 {
@@ -319,5 +320,10 @@ h1 {
 
   .show-btn-postindex {
     margin-left: 45px;
+  }
+
+  .container.d-flex {
+    flex-direction: column;
+    align-items: center;
   }
 }
