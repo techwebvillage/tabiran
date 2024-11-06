@@ -270,4 +270,29 @@ h1 {
  .postbtn {
     margin-left: 15px;
  }
+
+ .cover-show {
+  width: 100%;
+ }
+ 
+ .show-mobile {
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .comments {
+  margin: 0;
+  width: 100%;
+ }
+ .comments {
+  order: 2;
+ }
+
+ .box1, .box2, .caption, .favorite_btn, #text {
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-left: 30px;
+ }
 }
