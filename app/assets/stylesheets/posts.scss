@@ -302,8 +302,22 @@ h1 {
     width: 80%;
     text-align: left;
     font-size: 16px;
-    margin: 30px auto;
+    margin:30px auto 5px auto;
     padding: 0 1em;
     box-sizing: border-box;
+  }
+
+  #text {
+    margin: 5px auto;
+  }
+
+  .show-btn {
+    display: flex;
+    margin-left: 45px;
+    gap: 10px;
+  }
+
+  .show-btn-postindex {
+    margin-left: 45px;
   }
 }
