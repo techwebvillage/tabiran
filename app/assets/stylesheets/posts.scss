@@ -261,38 +261,87 @@ h1 {
   .form-group {
     width: 100%;
     padding: 0 1em;
- }
+  }
 
   .side {
     display: none;
- }
+  }
 
- .postbtn {
+  .postbtn {
     margin-left: 15px;
- }
+  }
 
- .cover-show {
-  width: 100%;
- }
+  .cover-show {
+    width: 100%;
+  }
  
- .show-mobile {
-  flex-direction: column;
-  align-items: center;
- }
+  .show-mobile {
+    flex-direction: column;
+    align-items: center;
+  }
 
- .comments {
-  margin: 0;
-  width: 100%;
- }
- .comments {
-  order: 2;
- }
+  .comments {
+    margin: 0;
+    width: 100%;
+    order: 2;
+    padding: 0 1em;
+    box-sizing: border-box;
+    text-align: left;
+  }
 
- .box1, .box2, .caption, .favorite_btn, #text {
-  width: 100%;
-  text-align: left;
-  font-size: 16px;
-  margin-top: 5px;
-  margin-left: 30px;
- }
+  .box1 {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 0 1em;
+    box-sizing: border-box;
+  }
+ 
+  .box2 {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 0 1em;
+    box-sizing: border-box;
+  }
+  .caption {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 0 1em;
+    box-sizing: border-box;
+  }
+
+  .favorite_btn {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 0 1em;
+    box-sizing: border-box;
+  }
+
+  #text {
+    text-align: left;
+    font-size: 16px;
+  }
+
+  .post-box img, .confirm-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .postbtn, .edit-btn, .delete-btn, .back-to-list-btn {
+    display: block;
+    width: calc(100% - 20px);
+    text-align: center;
+    margin: 10px auto;
+    padding: 0.5em;
+    box-sizing: border-box;
+  }
 }
