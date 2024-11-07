@@ -16,7 +16,9 @@
     <div class="container d-flex mt-5">
       <div class="d-block">
         <p class="caption"><%= @post.user.name %></p>
-        <%= attachment_image_tag @post, :image, format: 'jpeg', size: "450x350" %><br>
+        <div class="show-post-img">
+          <%= attachment_image_tag @post, :image, format: 'jpeg', size: "450x350" %><br>
+        </div>
         <div class="box1">
           <p class="caption"><%= @post.location %>
             <% if @post.favorited_by?(current_user) %>
