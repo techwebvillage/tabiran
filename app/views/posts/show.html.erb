@@ -1,6 +1,6 @@
 <div class="cover-show">
   <div class="container d-flex flex-column align-items-center">
-    <div class="row mt-5 mb-5">
+    <div class="show-title row mt-5">
       <h1 class="font-weight-normal">投稿詳細</h1>
     </div>
     <% if @comment.errors.any? %>
@@ -13,7 +13,7 @@
         </ul>
       </div>
     <% end %>
-    <div class="container d-flex mt-5">
+    <div class="container d-flex">
       <div class="d-block">
         <p class="caption"><%= @post.user.name %></p>
         <div class="show-post-img">
@@ -48,7 +48,7 @@
         </div>
       </div>
       <div class="show-mobile">
-        <div class="comments ml-5 mt-5">
+        <div class="comments">
           <%= form_with(model:[@post, @comment], local: true) do |f| %>
           <%= f.text_area :comment, :size=>"60x3",placeholder: "コメントする" %>
           <%= f.submit "送信する", class: "btn btn-dark mb-4" %>

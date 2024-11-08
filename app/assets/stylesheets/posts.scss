@@ -67,6 +67,9 @@ h1 {
   background-blend-mode: lighten;
   background-size: 100% 100%;
 }
+.show-title {
+  margin-bottom: 30px;
+}
 
 #text {
   font-size: 18px;
@@ -113,6 +116,7 @@ h1 {
 }
 
 .comments {
+  margin-top: 25px;
   margin-left: 50px;
 }
 
@@ -287,7 +291,7 @@ h1 {
 
   .comments {
     width: 100%;
-    max-width: 90%;
+    max-width: 100%;
     margin: 5px auto ;
     padding: 0;
     order: 2;
@@ -358,5 +362,9 @@ h1 {
   .show-post-img img {
     width: 100%;
     height: auto;
+  }
+
+  .show-title {
+    margin-bottom: 0;
   }
 }
