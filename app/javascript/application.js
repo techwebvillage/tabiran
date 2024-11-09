@@ -22,16 +22,12 @@ document.addEventListener("turbo:load", function () {
     });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const profileInput = document.querySelector(".profile-input");
-  if (profileInput) {
-    const adjustHeight = () => {
-      profileInput.style.height = "auto";
-      profileInput.style.height = `${profileInput.scrollHeight}px`; 
-    };
-
-    adjustHeight();
-
-    profileInput.addEventListener("input", adjustHeight);
+document.addEventListener("DOMContentLoaded", function() {
+  const profileTextArea = document.querySelector('.auto-resize');
+  if (profileTextArea) {
+    profileTextArea.addEventListener('input', function() {
+      this.style.height = 'auto';  // 高さをリセット
+      this.style.height = (this.scrollHeight) + 'px';  // 入力内容に合わせて高さを変更
+    });
   }
 });
