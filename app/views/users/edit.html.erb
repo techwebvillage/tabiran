@@ -30,19 +30,3 @@
   </div>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const textareas = document.querySelectorAll(".auto-resize");
-    textareas.forEach(textarea => {
-      textarea.style.overflow = "hidden";
-      textarea.style.resize = "none";
-      textarea.addEventListener("input", autoResize);
-      autoResize.call(textarea);
-    });
-
-    function autoResize() {
-      this.style.height = "auto";
-      this.style.height = (this.scrollHeight) + "px";
-    }
-  });
-</script>

@@ -21,3 +21,17 @@ document.addEventListener("turbo:load", function () {
       }
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const profileInput = document.querySelector(".profile-input");
+  if (profileInput) {
+    const adjustHeight = () => {
+      profileInput.style.height = "auto";
+      profileInput.style.height = `${profileInput.scrollHeight}px`; 
+    };
+
+    adjustHeight();
+
+    profileInput.addEventListener("input", adjustHeight);
+  }
+});
