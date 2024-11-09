@@ -23,11 +23,16 @@ document.addEventListener("turbo:load", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
+  console.log("JavaScript file loaded");
+
   const profileTextArea = document.querySelector('.auto-resize');
   if (profileTextArea) {
-    profileTextArea.addEventListener('input', function() {
+    const resizeTextArea = function() {
       this.style.height = 'auto';  // 高さをリセット
       this.style.height = (this.scrollHeight) + 'px';  // 入力内容に合わせて高さを変更
-    });
+    };
+
+    profileTextArea.addEventListener('input', resizeTextArea);
+    resizeTextArea.call(profileTextArea);  // 初期状態で高さ調整
   }
 });
