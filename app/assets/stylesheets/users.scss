@@ -102,6 +102,12 @@
     width: 200px;
 }
 
+.auto-resize {
+    min-height: 40px;
+    max-height: none;
+    overflow-y: auto;
+}
+
 @media screen and (max-width: 575px) {
     .edit-btn {
         margin-top: 0px;
