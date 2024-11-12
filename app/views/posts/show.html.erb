@@ -40,7 +40,7 @@
         <% if @post.user == current_user %>
           <div class="show-btn">
             <%= link_to '編集する', edit_post_path(@post.id), class: "btn btn-dark mr-3" %>
-            <%= link_to '削除する', post_path(@post.id),  data: { turbo_method: :delete, turbo_confirm:  "本当に消しますか？"}, class: "btn btn-dark" %><br>
+            <%= link_to '削除する', post_path(@post.id),  data: { turbo_method: :delete, turbo_confirm:  "本当に消しますか？"}, class: "btn btn-danger" %><br>
           </div>
         <% end %>
         <div class="show-btn-postindex">
