@@ -1,7 +1,7 @@
 .cover-user-show {
     height: 120%;
     width: 100%;
-    background-image: url(/assets/mypage.jpg);
+    background-image: url(/assets/white_00029.jpg);
     background-color: rgba(255, 255, 255, 0.4);
     background-blend-mode: lighten;
     background-size: 100% 100%;
@@ -10,9 +10,9 @@
 .cover-user-index {
     min-height: 100vh;
     width: 100%;
-    background-image: url(/assets/black_00123.jpg);
+    background-image: url(/assets/texture_00004.jpg);
     background-color: rgba(255, 255, 255, 0.4);
-    background-blend-mode: lighten;
+    // background-blend-mode: lighten;
     background-size: cover;
     background-position: center;
 }
@@ -20,7 +20,7 @@
 .cover-user-edit {
     height: 100%;
     width: 100%;
-    background-image: url(/assets/mypage_edit.jpg);
+    background-image: url(/assets/white_00029.jpg);
     background-color: rgba(255, 255, 255, 0.4);
     background-blend-mode: lighten;
     background-size: 100% 100%;
