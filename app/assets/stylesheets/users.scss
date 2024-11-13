@@ -1,10 +1,10 @@
 .cover-user-show {
-    height: 120%;
+    min-height: 100vh;
     width: 100%;
     background-image: url(/assets/white_00029.jpg);
-    background-color: rgba(255, 255, 255, 0.4);
-    background-blend-mode: lighten;
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
+
 }
 
 .cover-user-index {
@@ -122,6 +122,37 @@
     box-shadow: 0 4px 8px rbga(0, 0, 0, 0.3) !important;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    // margin-top: 20px;
+}
+
+.profile-img-container {
+    margin-top: 30px;
+    margin-right: 30px;
+    border: 3px solid #ccc;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+}
+
+.profile-info h1 {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.edit-btn {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.my-3 {
+    border-top: 3px solid black;
+}
+
 
 @media screen and (max-width: 575px) {
     .edit-btn {
