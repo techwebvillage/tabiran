@@ -125,8 +125,11 @@
 
 .profile-header {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-    // margin-top: 20px;
+    width: 100%;
+    text-align: left;
 }
 
 .profile-img-container {
@@ -136,8 +139,8 @@
     border: 3px solid #ccc;
     border-radius: 50%;
     overflow: hidden;
-    width: 200px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -157,35 +160,49 @@
     height: 100%;
 }
 
-.profile-info h1 {
-    margin: 30px auto;
-    text-align: center;
+.profile-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
 }
+
 
 .edit-btn {
     margin-top: 10px;
     margin-bottom: 30px;
 }
 
-.my-3 {
-    border-top: 3px solid #222 !important;
-    margin: 0;
+.style0 {
+    background-color: #000000;
+    border: none;
+    height: 3px;
 }
 
-.profile-text {
+.mypage-profile-box {
+    width: 95%;
+    margin-top: 20px;
     background-color: #ffffff;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
+.profile-text {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
 .follow-counts {
     display: flex;
     gap: 5px;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .mypage-button-group {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -243,5 +260,11 @@
 
     .auto-resize {
         overflow: visible;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
