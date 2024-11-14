@@ -4,6 +4,23 @@
     background-image: url(/assets/white_00029.jpg);
     background-size: cover;
     background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+.cover-user-show * {
+    position: relative;
+    z-index: 2;
+}
+
+.cover-user-show::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
 
 }
 
@@ -16,6 +33,7 @@
     background-size: cover;
     background-position: center;
 }
+
 
 .cover-user-edit {
     height: 100%;
@@ -181,14 +199,14 @@
     height: 3px;
 }
 
-.mypage-profile-box {
-    width: 95%;
-    margin-top: 20px;
-    background-color: #ffffff;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-}
+// .mypage-profile-box {
+//     width: 95%;
+//     margin-top: 20px;
+//     background-color: #ffffff;
+//     padding: 10px;
+//     border-radius: 5px;
+//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+// }
 
 .profile-text {
     margin-top: 10px;
