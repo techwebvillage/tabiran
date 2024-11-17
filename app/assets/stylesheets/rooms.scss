@@ -12,16 +12,17 @@
     flex-direction: column;
     padding: 20px 10px;
     width: 100%;
-    margin: 15px 15px;
+    margin: 15px 0;
     font-size: 14px;
     background: #e2edef;
 }
 
 .says {
     align-self: flex-start;
-    margin: 0 400px 0 0;
-    padding: 10px 10px 0 10px;
+    margin: 0 30% 0 0;
+    padding: 10px;
     width: fit-content;
+    max-width: 60%;
     text-align: left;
     overflow-wrap: break-word;
     border-radius: 12px;
@@ -30,9 +31,10 @@
 
 .mycomment {
     align-self: flex-end;
-    margin: 0 0 0 400px;
-    padding: 10px 10px 0 10px;
+    margin: 0 0 0 30%;
+    padding: 10px;
     width: fit-content;
+    max-width: 60%;
     text-align: left;
     overflow-wrap: break-word;
     border-radius: 12px;
@@ -47,4 +49,74 @@
     color: rgba(2, 13, 27, 0.805);
     font-family: Tahoma;
     font-size: larger;
+}
+
+.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.form-text-field {
+    flex: 1;
+    max-width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    background: #000;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 575px) {
+    .chat-container {
+        padding: 10px 5px;
+        margin: 10px 0;
+    }
+
+    .says,
+    .mycomment {
+        margin: 5px 0;
+        max-width: 80%;
+        padding: 10px;
+    }
+
+    .says {
+        align-self: flex-start;
+    }
+
+    .mycomment {
+        align-self: flex-end;
+    }
+
+    .title {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .form-text-field {
+        margin-right: 0; /* スマホではボタンとの間隔をなくす */
+        margin-bottom: 10px; /* 折り返した場合の余白 */
+    }
+
+    .btn {
+        width: 100%; /* スマホではボタンを全幅に */
+    }
+
+    .text-center {
+        flex-direction: column;
+    }
 }
