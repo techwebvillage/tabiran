@@ -142,11 +142,18 @@
 
 .profile-header {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+
+.profile-header .profile-info {
+    flex-grow: 1;
     text-align: left;
+}
+
+.profile-header .edit-btn {
+    text-align: right;
 }
 
 .profile-img-container {
@@ -178,17 +185,11 @@
 }
 
 .profile-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    text-align: left;
+    text-align: left !important;
 }
 
-
 .edit-btn {
-    margin-top: 10px;
-    margin-bottom: 30px;
+    text-align: right;
 }
 
 .style0 {
