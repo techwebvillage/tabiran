@@ -88,3 +88,5 @@ gem 'enum_help'
 gem 'jquery-rails'
 
 gem 'devise-i18n'
+
+gem 'dotenv-rails'

@@ -121,6 +121,10 @@ GEM
     devise-i18n (1.12.1)
       devise (>= 4.9.0)
     domain_name (0.6.20240107)
+    dotenv (3.1.4)
+    dotenv-rails (3.1.4)
+      dotenv (= 3.1.4)
+      railties (>= 6.1)
     drb (2.2.1)
     enum_help (0.0.19)
       activesupport (>= 3.0.0)
@@ -333,6 +337,7 @@ DEPENDENCIES
   debug
   devise
   devise-i18n
+  dotenv-rails
   enum_help
   error_highlight (>= 0.4.0)
   ffi
