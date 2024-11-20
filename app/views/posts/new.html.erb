@@ -25,10 +25,14 @@
         <label class="form-label">【地図】</label><br>
           <input id="address" type="textbox" value="location">
           <input type="button" value="Encode" onclick="codeAddress()">
+          <div id="display"></div>
           <div class="map">
             <div id="map" class="map"></div>
               <script>
                 let map
+                let geocoder
+
+                const display = document.getElementById('display')
 
                 function initMap() {
                   geocoder = new google.maps.Geocoder()
@@ -43,9 +47,7 @@
                     map: map
                   });
                 }
-
-                let geocoder
-
+                
                 function codeAddress(){
                   let inputAddress = document.getElementById('address').value;
 
@@ -56,6 +58,7 @@
                         map: map,
                         position: results[0].geometry.location
                       });
+                      display.textContent = "検索結果：" + results[ 0 ].geometry.location
                     } else {
                       alert('該当する結果がありませんでした : ' + status);
                     }
