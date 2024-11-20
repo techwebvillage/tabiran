@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_10_13_235443) do
+ActiveRecord::Schema[7.1].define(version: 2024_11_20_003824) do
   create_table "comments", force: :cascade do |t|
     t.text "comment"
     t.integer "user_id"
@@ -54,6 +54,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_13_235443) do
     t.integer "user_id"
     t.integer "status", default: 0, null: false
     t.float "star"
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "read_counts", force: :cascade do |t|
