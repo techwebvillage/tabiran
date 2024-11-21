@@ -9,7 +9,6 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <link rel="preload" href="/assets/application.css" as="style"> 
     <%= javascript_importmap_tags %>
-    <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initMap" async defer></script>
     <%= favicon_link_tag 'favicon.ico' %>
    
   </head>
