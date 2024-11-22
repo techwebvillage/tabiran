@@ -20,6 +20,13 @@ document.addEventListener("turbo:load", function () {
         console.log("Menu is closed");
       }
     });
+
+    if (typeof initMap === "function") {
+      console.log("Initializing Google Maps");
+      initMap();
+    } else {
+      console.warn("initMap function not found.");
+    }
 });
 
 document.addEventListener("turbo:load", function() {

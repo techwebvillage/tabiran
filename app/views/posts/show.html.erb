@@ -66,9 +66,10 @@
                 map: map,
                 title: "投稿の位置",
               });
+
+              google.maps.event.trigger(map, "resize");
             }
         </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_MAPS_API_KEY"] %>&callback=initMap" async defer></script>
 
 
         <% if @post.user == current_user %>
