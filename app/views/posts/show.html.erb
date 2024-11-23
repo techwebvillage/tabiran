@@ -38,7 +38,7 @@
           <p id="text"><%= @post.text %></p>
         </div>
        
-        <div id="map" class="map"></div>
+        <div id="showmap" class="map"></div>
           
         <script>
             function initMap() {
@@ -55,7 +55,7 @@
               const postLocation = { lat: latitude, lng: longitude };
 
               // マップの初期化
-              const map = new google.maps.Map(document.getElementById("map"), {
+              const map = new google.maps.Map(document.getElementById("showmap"), {
                 center: postLocation,
                 zoom: 15,
               });

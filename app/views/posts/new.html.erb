@@ -26,8 +26,8 @@
           <input id="address" type="text" placeholder="場所を入力する" class="form-control mb-2">
           <input type="button" value="検索" onclick="codeAddress()" class="btn btn-dark mb-3">
           <div id="display"></div>
-          <div class="map">
-            <div id="map" class="map"></div>
+          <div>
+            <div id="newmap" class="map"></div>
 
             <!-- 隠しフィールドに緯度・経度を保持 -->
             <%= f.hidden_field :latitude, id: "latitude" %>
@@ -37,25 +37,26 @@
           <script>
             let map;
             let geocoder;
-            let marker; // グローバル変数として管理
+            let marker; 
           
             function initMap() {
+              
               const initialPosition = { lat: 35.6803997, lng: 139.7690174 }; // 初期位置
               geocoder = new google.maps.Geocoder();
           
-              // マップを初期化
-              map = new google.maps.Map(document.getElementById("map"), {
+              
+              map = new google.maps.Map(document.getElementById("newmap"), {
                 center: initialPosition,
                 zoom: 10,
               });
           
-              // 初期ピンを設定
+            
               marker = new google.maps.Marker({
                 position: initialPosition,
                 map: map,
               });
           
-              // 初期位置を隠しフィールドに設定
+              
               document.getElementById("latitude").value = initialPosition.lat;
               document.getElementById("longitude").value = initialPosition.lng;
             }
@@ -65,19 +66,19 @@
           
               geocoder.geocode({ address: inputAddress }, (results, status) => {
                 if (status === "OK") {
-                  // マップを検索結果に移動
+                  
                   map.setCenter(results[0].geometry.location);
           
-                  // 既存のピンを削除して新しいピンを設定
+                  
                   if (marker) {
-                    marker.setMap(null); // ピンを削除
+                    marker.setMap(null); 
                   }
                   marker = new google.maps.Marker({
                     map: map,
                     position: results[0].geometry.location,
                   });
           
-                  // 緯度・経度を表示と隠しフィールドに反映
+                  
                   const location = results[0].geometry.location;
                   document.getElementById("latitude").value = location.lat();
                   document.getElementById("longitude").value = location.lng();
@@ -90,7 +91,7 @@
               google.maps.event.trigger(map, "resize");
             }
           </script>
-          
+
           
       </div>
       <div class="form-group mb-3">

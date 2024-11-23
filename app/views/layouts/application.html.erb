@@ -10,8 +10,7 @@
     <link rel="preload" href="/assets/application.css" as="style"> 
     <%= javascript_importmap_tags %>
     <%= favicon_link_tag 'favicon.ico' %>
-    <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_MAPS_API_KEY"] %>&callback=initMap" async defer></script>
-
+    
    
   </head>
 
@@ -38,5 +37,7 @@
     <%= yield %>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_MAPS_API_KEY"] %>&callback=initMap" async defer></script>
+
   </body>
 </html>
