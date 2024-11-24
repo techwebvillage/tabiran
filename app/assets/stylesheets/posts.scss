@@ -235,6 +235,7 @@ h1 {
   display: block;
   margin: 0 auto;
   max-width: calc(100% - 20px);
+  box-sizing: border-box;
 }
 
 .post-box p {
@@ -253,8 +254,9 @@ h1 {
 
 .confirm-box img {
   display: block;
-  margin: 0 auto;
-  max-width: 100%;
+  margin: 10px auto;
+  max-width: calc(100% - 20px);
+  box-sizing: border-box;
 }
 
 .confirm-box p {
@@ -410,4 +412,11 @@ select {
     width: 80%;
     max-width: none;
  }
+
+ .confirm-box img {
+  display: block;
+  margin: 10px auto;
+  max-width: calc(100% - 30px);
+  box-sizing: border-box;
+}
 }
