@@ -5,7 +5,7 @@ h1 {
 .cover-new {
   min-height: 100vh;
   width: 100%;
-  background-image: url(/assets/watercolor_00687);
+  background-image: image-url("watercolor_00687");
   background-color: rgba(255, 255, 255, 0.4);
   background-blend-mode: darken;
   background-size: 100% 100%;
@@ -24,7 +24,7 @@ h1 {
   height: auto;
   width: 100%;
   padding-bottom: 50px;
-  background-image: url(/assets/white_00027.jpg);
+  background-image: image-url("white_00027.jpg");
   background-color: rgba(255, 255, 255, 0.4);
   background-blend-mode: lighten;
   background-size: cover;
@@ -64,7 +64,7 @@ h1 {
 .cover-show {
   min-height: 100vh;
   width: 100%;
-  background-image: url(/assets/watercolor_00686.jpg);
+  background-image: image-url("watercolor_00686.jpg");
   background-color: rgba(255, 255, 255, 0.4);
   background-blend-mode: lighten;
   background-size: 100% 100%;
@@ -80,7 +80,7 @@ h1 {
 .cover-edit {
   min-height: 100vh;
   width: 100%;
-  background-image: url(/assets/white_00027.jpg);
+  background-image: image-url("white_00027.jpg");
   background-color: rgba(255, 255, 255, 0.4);
   background-blend-mode: lighten;
   background-size: 100% 100%;
