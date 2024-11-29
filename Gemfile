@@ -48,6 +48,7 @@ group :development, :test do
   gem 'sqlite3', '~> 1.4'
   gem "debug", platforms: %i[ mri mingw mswin x64_mingw ]
   gem 'pry-rails'
+  gem 'pry', '~> 0.14.1'
 end
 
 group :production do
