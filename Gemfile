@@ -51,9 +51,9 @@ group :development, :test do
   gem 'pry', '~> 0.14.1'
 end
 
-group :production do
-  gem "pg"
-end
+# group :production do
+#   gem "pg"
+# end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]

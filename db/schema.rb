@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_11_20_003824) do
+ActiveRecord::Schema[7.1].define(version: 2024_11_28_220808) do
   create_table "comments", force: :cascade do |t|
     t.text "comment"
     t.integer "user_id"
@@ -46,25 +46,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_20_003824) do
   end
 
   create_table "posts", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "image_id"
     t.string "location"
     t.string "text"
+    t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image_id"
-    t.integer "user_id"
-    t.integer "status", default: 0, null: false
-    t.float "star"
     t.float "latitude"
     t.float "longitude"
-  end
-
-  create_table "read_counts", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "post_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["post_id"], name: "index_read_counts_on_post_id"
-    t.index ["user_id"], name: "index_read_counts_on_user_id"
   end
 
   create_table "relationships", force: :cascade do |t|
@@ -79,7 +69,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_20_003824) do
   create_table "rooms", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -108,8 +97,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_20_003824) do
   add_foreign_key "entries", "users"
   add_foreign_key "messages", "rooms"
   add_foreign_key "messages", "users"
-  add_foreign_key "read_counts", "posts"
-  add_foreign_key "read_counts", "users"
   add_foreign_key "relationships", "users", column: "followed_id"
   add_foreign_key "relationships", "users", column: "follower_id"
 end

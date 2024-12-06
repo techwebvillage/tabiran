@@ -29,15 +29,14 @@ document.addEventListener("turbo:load", function () {
     }
 });
 
-document.addEventListener("turbo:load", function() {
-  console.log("JavaScript file loaded");
+// document.addEventListener("turbo:load", function() {
+//   console.log("JavaScript file loaded");
 
-  const mapElement = document.getElementById("map");
-  if (mapElement && typeof initMap === "function") {
-    console.log("Initializing Google Maps");
-    initMap();
-  }
-
+  // const mapElement = document.getElementById("map");
+  // if (mapElement && typeof initMap === "function") {
+  //   console.log("Initializing Google Maps");
+  //   initMap();
+  // }
   const profileTextArea = document.querySelector('.auto-resize');
   if (profileTextArea) {
     const resizeTextArea = function() {
@@ -48,5 +47,6 @@ document.addEventListener("turbo:load", function() {
     profileTextArea.addEventListener('input', resizeTextArea);
     resizeTextArea.call(profileTextArea);
   }
+
 });
 
