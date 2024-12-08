@@ -28,82 +28,61 @@
     <div id="display"></div>
     </div>
     <div id="editmap" class="map">
-
-          <%= f.hidden_field :latitude, id: "latitude", value: @post.latitude %>
-          <%= f.hidden_field :longitude, id: "longitude", value: @post.longitude %>
-
+      <%= f.hidden_field :latitude, id: "latitude", value: @post.latitude %>
+      <%= f.hidden_field :longitude, id: "longitude", value: @post.longitude %>
     </div>
 
         <script>
-          let map;
-          let geocoder;
-          let marker;
-
-          function codeAddress() {
-              const inputAddress = document.getElementById("address").value;
-          
-              geocoder.geocode({ address: inputAddress }, (results, status) => {
-                if (status === "OK") {
-                  
-                  map.setCenter(results[0].geometry.location);
-          
-                  
-                  if (marker) {
-                    marker.setMap(null); 
-                  }
-                  marker = new google.maps.Marker({
-                    map: map,
-                    position: results[0].geometry.location,
-                  });
-          
-                  
-                  const location = results[0].geometry.location;
-                  document.getElementById("latitude").value = location.lat();
-                  document.getElementById("longitude").value = location.lng();
-                  document.getElementById("display").textContent =
-                    "検索結果: " + location.lat() + ", " + location.lng();
-                } else {
-                  alert("該当する結果がありませんでした: " + status);
-                }
-              });
-              google.maps.event.trigger(map, "resize");
-            }
+        
+          let editMap;
+          let editGeocoder;
+          let editMarker;
 
           function initMap() {
-
-          const initialLat = parseFloat("<%= @post.latitude || 35.6803997 %>");
+            const initialLat = parseFloat("<%= @post.latitude || 35.6803997 %>");
             const initialLng = parseFloat("<%= @post.longitude || 139.7690174 %>");
-              
-          const initialPosition = { lat: initialLat, lng: initialLng }; // 初期位置
-          geocoder = new google.maps.Geocoder();
-      
-          
-          map = new google.maps.Map(document.getElementById("editmap"), {
-            center: initialPosition,
-            zoom: 10,
-          });
-      
-        
-          marker = new google.maps.Marker({
-            position: initialPosition,
-            map: map,
-          });
-      
-          
-          document.getElementById("latitude").value = initialPosition.lat;
-          document.getElementById("longitude").value = initialPosition.lng;
-        }
+            const initialPosition = { lat: initialLat, lng: initialLng };
 
-        const observer = new MutationObserver(() => {
-                if (document.getElementById('map')) {
-                    initMap();
-                    observer.disconnect(); 
-                }
+            editGeocoder = new google.maps.Geocoder();
+
+            editMap = new google.maps.Map(document.getElementById('editmap'), {
+              center: initialPosition,
+              zoom: 12,
             });
 
-            observer.observe(document.body, { childList: true, subtree: true });
+            editMarker = new google.maps.Marker({
+              position: initialPosition,
+              map: editMap,
+            });
 
-         
+            document.getElementById("latitude").value = initialPosition.lat;
+            document.getElementById("longitude").value = initialPosition.lng;
+          }
+
+          function codeAddress() {
+            const inputAddress = document.getElementById('address').value;
+
+            editGeocoder.geocode({ 'address': inputAddress }, function(results, status) {
+              if (status === 'OK') {
+                editMap.setCenter(results[0].geometry.location);
+                if (editMarker) {
+                  editMarker.setMap(null);
+                }
+                editMarker = new google.maps.Marker({
+                  map: editMap,
+                  position: results[0].geometry.location,
+                });
+
+                document.getElementById("latitude").value = location.lat();
+                document.getElementById("longitude").value = location.lng();
+              } else {
+                alert('該当する結果がありませんでした：' + status);
+              }
+            });
+            google.maps.event.trigger(editmap, "resize");
+          }
+          
+
         </script>
 
       <div class="form-group mb-4">

@@ -25,84 +25,51 @@
         <label class="form-label">【地図】</label><br>
         <input id="address" type="text" placeholder="場所を入力する" class="form-control mb-2">
         <input type="button" value="検索" onclick="codeAddress()" class="btn btn-dark mb-3">
-        <div id="display"></div>
       </div>
       <div id="newmap" class="map">
-      
-        <!-- 隠しフィールドに緯度・経度を保持 -->
         <%= f.hidden_field :latitude, id: "latitude" %>
         <%= f.hidden_field :longitude, id: "longitude" %>
       </div>
-          
-          <script>
-            let map;
-            let geocoder;
-            let marker; 
-          
-            function codeAddress() {
-              const inputAddress = document.getElementById("address").value;
-          
-              geocoder.geocode({ address: inputAddress }, (results, status) => {
-                if (status === "OK") {
-                  
-                  map.setCenter(results[0].geometry.location);
-          
-                  
-                  if (marker) {
-                    marker.setMap(null); 
-                  }
-                  marker = new google.maps.Marker({
-                    map: map,
-                    position: results[0].geometry.location,
-                  });
-          
-                  
-                  const location = results[0].geometry.location;
-                  document.getElementById("latitude").value = location.lat();
-                  document.getElementById("longitude").value = location.lng();
-                  document.getElementById("display").textContent =
-                    "検索結果: " + location.lat() + ", " + location.lng();
-                } else {
-                  alert("該当する結果がありませんでした: " + status);
-                }
-              });
-              google.maps.event.trigger(map, "resize");
-            }
-            
-            function initMap() {
-              
-              const initialPosition = { lat: 35.6803997, lng: 139.7690174 }; // 初期位置
-              geocoder = new google.maps.Geocoder();
-          
-              
-              map = new google.maps.Map(document.getElementById("newmap"), {
-                center: initialPosition,
-                zoom: 10,
-              });
-          
-            
-              marker = new google.maps.Marker({
-                position: initialPosition,
-                map: map,
-              });
-          
-              
-              document.getElementById("latitude").value = initialPosition.lat;
-              document.getElementById("longitude").value = initialPosition.lng;
-            }
 
-            const observer = new MutationObserver(() => {
-                if (document.getElementById('map')) {
-                    initMap();
-                    observer.disconnect(); 
-                }
+      <script>
+
+      function initMap() {
+        const initialPosition = { lat: 35.6803997, lng: 139.7690174 };
+        const geocoder = new google.maps.Geocoder();
+
+        newmap = new google.maps.Map(document.getElementById('newmap'), {
+          center: initialPosition,
+          zoom: 12,
+        });
+
+        const marker = new google.maps.Marker({
+          position: initialPosition,
+          map: newmap,
+        });
+
+        document.getElementById("latitude").value = initialPosition.lat;
+        document.getElementById("longitude").value = initialPosition.lng;
+      }
+
+      function codeAddress() {
+        const inputAddress = document.getElementById('address').value;
+
+        geocoder.geocode({ address: inputAddress }, function (results, status) {
+          if (status === 'OK') {
+            newmap.setCenter(results[0].geometry.location);
+            const marker = new google.maps.Marker({
+              map: newmap,
+              position: results[0].geometry.location,
             });
+          } else {
+            alert('該当する結果がありませんでした：' + status);
+          }
+        });
+      }
 
-            observer.observe(document.body, { childList: true, subtree: true });
-          
-            
-          </script>
 
+      </script>
+      
           
       <div class="form-group mb-3">
         <label class="form-label">【画像】</label><br>

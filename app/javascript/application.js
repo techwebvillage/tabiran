@@ -7,36 +7,20 @@ import "@hotwired/turbo-rails";
 import "controllers";
 
 document.addEventListener("turbo:load", function () {
-    console.log("JavaScript file loaded");
+  console.log("JavaScript file loaded");
 
-    $('#js-hamburger-menu').off('click').on('click', function () {
-      console.log("Hamburger menu clicked");
-      $('.navigation').toggleClass('open');
-      $(this).toggleClass('hamburger-menu--open');
+  $('#js-hamburger-menu').off('click').on('click', function () {
+    console.log("Hamburger menu clicked");
+    $('.navigation').toggleClass('open');
+    $(this).toggleClass('hamburger-menu--open');
 
-      if ($('.navigation').hasClass('open')) {
-        console.log("Menu is open");  
-      } else {
-        console.log("Menu is closed");
-      }
-    });
-
-    if (typeof initMap === "function") {
-      console.log("Initializing Google Maps");
-      initMap();
+    if ($('.navigation').hasClass('open')) {
+      console.log("Menu is open");  
     } else {
-      console.warn("initMap function not found.");
+      console.log("Menu is closed");
     }
-});
+  });
 
-// document.addEventListener("turbo:load", function() {
-//   console.log("JavaScript file loaded");
-
-  // const mapElement = document.getElementById("map");
-  // if (mapElement && typeof initMap === "function") {
-  //   console.log("Initializing Google Maps");
-  //   initMap();
-  // }
   const profileTextArea = document.querySelector('.auto-resize');
   if (profileTextArea) {
     const resizeTextArea = function() {
@@ -46,7 +30,8 @@ document.addEventListener("turbo:load", function () {
 
     profileTextArea.addEventListener('input', resizeTextArea);
     resizeTextArea.call(profileTextArea);
-  }
 
+  }
 });
+
 
